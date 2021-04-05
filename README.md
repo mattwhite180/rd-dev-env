@@ -1,6 +1,6 @@
 # rd-dev-env
 ![Python Badge](https://img.shields.io/badge/Python-3.6.5-informational?style=plastic&logo=python&logoColor=green&color=green)
-![Docker Badge](https://img.shields.io/badge/Docker-19.03-informational?style=plastic&logo=docker&logoColor=blue&color=blue)
+![Docker Badge](https://img.shields.io/badge/Docker-amazonlinux-informational?style=plastic&logo=docker&logoColor=blue&color=blue)
 
 | main | dev |
 |------|-----|
