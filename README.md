@@ -2,6 +2,10 @@
 ![Python Badge](https://img.shields.io/badge/Python-3.6.5-informational?style=plastic&logo=python&logoColor=green&color=green)
 ![Docker Badge](https://img.shields.io/badge/Docker-19.03-informational?style=plastic&logo=docker&logoColor=blue&color=blue)
 
+| main | dev |
+|------|-----|
+| [![Docker Image CI](https://github.com/mattwhite180/rd-dev-env/actions/workflows/docker.yml/badge.svg?branch=main)](https://github.com/mattwhite180/rd-dev-env/actions/workflows/docker.yml) | [![Docker Image CI](https://github.com/mattwhite180/rd-dev-env/actions/workflows/docker.yml/badge.svg?branch=dev)](https://github.com/mattwhite180/rd-dev-env/actions/workflows/docker.yml) |
+
 
 ## About
 * uses the [AmazonLinux](https://hub.docker.com/_/amazonlinux) docker image
