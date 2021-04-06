@@ -16,7 +16,7 @@ ENV PATH "$PYENV_ROOT/bin:$PATH"
 ENV PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
 ENV PATH="/pyenv/bin/:$PATH"
 
-COPY pyenv/ /pyenv
+RUN git clone -b 1.2.26 https://github.com/pyenv/pyenv /pyenv
 
 RUN eval "$(pyenv init -)"
 
