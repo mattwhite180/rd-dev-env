@@ -1,10 +1,32 @@
-FROM amazonlinux:2.0.20210326.0
+#FROM amazonlinux:2.0.20210326.0
+
+FROM debian:buster
 
 RUN mkdir -p /usr/src/app
 
 WORKDIR /usr/src/app
 
-RUN yum install tar yum install make git gcc zlib-devel bzip2-devel readline-devel sqlite-devel openssl-devel -y
+RUN apt-get update -y \
+    && apt-get install -y \
+        make \
+        build-essential \
+        libssl-dev \
+        zlib1g-dev \
+        libbz2-dev \
+        libreadline-dev \
+        libsqlite3-dev \
+        wget \
+        curl \
+        llvm \
+        libncurses5-dev \
+        libncursesw5-dev \
+        xz-utils \
+        tk-dev \
+        libffi-dev \
+        liblzma-dev \
+        python-openssl \
+        git \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY tests.py ./
 #COPY script.sh ./
