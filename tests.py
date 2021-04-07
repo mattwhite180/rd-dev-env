@@ -4,10 +4,11 @@ import sys
 
 class TestPythonVersion(unittest.TestCase):
     def test_python_version(self):
-        need = "3.6.5"
-        current = sys.version.split()[0]
-        errorMessage = "need " + need + ", instead of " + current
-        self.assertEqual(current, need, errorMessage)
+        versionNeeded = "3.6.5"
+        currentVersion = sys.version.split()[0]
+        errorMessage = ("python version needs to be " +
+        versionNeeded + ", instead of " + currentVersion)
+        self.assertEqual(currentVersion, versionNeeded, errorMessage)
 
 
 unittest.main()
