@@ -25,3 +25,6 @@ sudo systemctl enable docker
 	* `./run.sh bash`
 
 ## TODO:
+* install/use brew for our container to keep everything as similar as possible to the notion dock
+
+
