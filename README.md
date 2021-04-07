@@ -8,7 +8,7 @@
 
 
 ## About
-* uses the [AmazonLinux](https://hub.docker.com/_/amazonlinux) docker image
+* uses the [Debian](https://hub.docker.com/_/debian) docker image
 
 ## Installing Docker on Ubuntu 20.04
 ```
