@@ -26,12 +26,10 @@ RUN apt-get update -y \
         liblzma-dev \
         python-openssl \
         git \
+	openssl libxmlsec1 pkg-config freetds-dev postgresql \
     && rm -rf /var/lib/apt/lists/*
 
 COPY tests.py ./
-#COPY script.sh ./
-
-#RUN bash script.sh
 
 ENV PYENV_ROOT "/pyenv"
 ENV PATH "$PYENV_ROOT/bin:$PATH"
