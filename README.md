@@ -24,7 +24,7 @@ sudo systemctl enable docker
 * run and attach shell
 	* `./run.sh bash`
 
-## TODO:
-* install/use brew for our container to keep everything as similar as possible to the notion dock
-
+## USEFUL LINKS:
+* [docker postgres](https://docs.docker.com/engine/examples/postgresql_service/)
+* https://launchschool.com/blog/how-to-install-postgres-for-linux
 

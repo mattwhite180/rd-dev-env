@@ -68,7 +68,14 @@ RUN echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 
 RUN source ~/.bashrc
 
-RUN apt-get install -y unixodbc-dev libgssapi-krb5-2
+RUN apt-get install -y unixodbc-dev libgssapi-krb5-2 postgresql postgresql-contrib libpq-dev
+
+#RUN    /etc/init.d/postgresql start &&\
+#    psql --command "CREATE USER rd WITH PASSWORD 'test1234';" &&\
+#    psql --command "CREATE DATABASE rentdynamics WITH OWNER rd;" &&\
+#    psql --command "CREATE DATABASE rentplus WITH OWNER rd;" &&\
+#    psql --command "ALTER USER rd WITH SUPERUSER;"
+
 
 CMD python tests.py
 
