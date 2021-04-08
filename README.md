@@ -1,6 +1,6 @@
 # rd-dev-env
 ![Python Badge](https://img.shields.io/badge/Python-3.6.5-informational?style=plastic&logo=python&logoColor=green&color=green)
-![Docker Badge](https://img.shields.io/badge/Docker-amazonlinux-informational?style=plastic&logo=docker&logoColor=blue&color=blue)
+![Docker Badge](https://img.shields.io/badge/Docker-Debian-informational?style=plastic&logo=docker&logoColor=blue&color=blue)
 
 | main | dev |
 |------|-----|
@@ -25,3 +25,6 @@ sudo systemctl enable docker
 	* `./run.sh bash`
 
 ## TODO:
+* install/use brew for our container to keep everything as similar as possible to the notion dock
+
+
