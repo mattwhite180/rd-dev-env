@@ -29,6 +29,7 @@ RUN apt-get update -y \
         python-openssl \
         git \
 	openssl libxmlsec1 pkg-config freetds-dev postgresql \
+    apt-utils unixodbc-dev libgssapi-krb5-2 postgresql postgresql-contrib libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
 COPY tests.py ./
@@ -68,8 +69,6 @@ RUN echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 
 RUN source ~/.bashrc
 
-RUN apt-get install -y unixodbc-dev libgssapi-krb5-2 postgresql postgresql-contrib libpq-dev
-
 #RUN    /etc/init.d/postgresql start &&\
 #    psql --command "CREATE USER rd WITH PASSWORD 'test1234';" &&\
 #    psql --command "CREATE DATABASE rentdynamics WITH OWNER rd;" &&\
@@ -78,5 +77,3 @@ RUN apt-get install -y unixodbc-dev libgssapi-krb5-2 postgresql postgresql-contr
 
 
 CMD python tests.py
-
-

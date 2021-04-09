@@ -1,0 +1,21 @@
+version: "3.3"
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=rd
+      - POSTGRES_PASSWORD=test1234
+  web:
+    build: .
+    command: python tests.py
+    #command: /bin/bash -c "sleep infinity"
+    volumes:
+      - .:/python
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
