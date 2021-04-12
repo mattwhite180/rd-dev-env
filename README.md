@@ -1,6 +1,7 @@
 # rd-dev-env
 ![Python Badge](https://img.shields.io/badge/Python-3.6.5-informational?style=plastic&logo=python&logoColor=green&color=green)
 ![Docker Badge](https://img.shields.io/badge/Docker-Debian-informational?style=plastic&logo=docker&logoColor=blue&color=blue)
+![Docker Badge](https://img.shields.io/badge/DockerCompose-3.3-informational?style=plastic&logo=docker&logoColor=blue&color=blue)
 
 | main | dev |
 |------|-----|
@@ -12,19 +13,24 @@
 
 ## Installing Docker on Ubuntu 20.04
 ```
-sudo apt install docker docker-compose docker-doc docker.io -y
-sudo usermod -aG docker $USER
-sudo systemctl enable docker
+sudo apt-get remove docker docker-engine docker.io containerd runc -y
+sudo apt update; sudo apt upgrade -y
+sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+echo 'should match: 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88'
+sudo apt update
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get install docker-compose docker-ce docker-ce-cli containerd.io -y
 # reboot your computer
 ```
 
 ## Execute Program
 * run it normally
-	* `./run.sh`
+	* `docker-compose up`
 * run and attach shell
-	* `./run.sh bash`
+	* `docker-compose run web bash`
 
-## TODO:
-* install/use brew for our container to keep everything as similar as possible to the notion dock
-
+## USEFUL LINKS:
+* [docker-compose postgres](https://docs.docker.com/compose/django/)
 
