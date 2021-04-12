@@ -10,7 +10,7 @@ services:
       - POSTGRES_USER=rd
       - POSTGRES_PASSWORD=test1234
   web:
-    build: .
+    build: deb/
     command: python tests.py
     #command: /bin/bash -c "sleep infinity"
     volumes:
