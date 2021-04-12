@@ -11,7 +11,7 @@ services:
       - POSTGRES_PASSWORD=test1234
   web:
     build: deb/
-    command: python tests.py
+    command: /bin/bash -c "python tests.py"
     #command: /bin/bash -c "sleep infinity"
     volumes:
       - .:/python
