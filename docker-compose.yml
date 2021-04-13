@@ -3,16 +3,23 @@ version: "3.3"
 services:
   db:
     image: postgres
+    restart: always
     volumes:
       - ./data/db:/var/lib/postgresql/data
+    expose:
+      - "5432"
+    ports:
+      - "5432:5432"
     environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=rd
-      - POSTGRES_PASSWORD=test1234
+      - POSTGRES_DB='postgres'
+      - POSTGRES_USER='rd'
+      - POSTGRES_PASSWORD='test1234'
+    #command: echo "im in db"
+      #command: /bin/bash -c "sleep infinity"
   web:
     build: deb/
-    command: /bin/bash -c "python tests.py"
-    #command: /bin/bash -c "sleep infinity"
+    #command: /bin/bash -c "python tests.py"
+    command: /bin/bash -c "sleep infinity"
     volumes:
       - .:/python
     ports:

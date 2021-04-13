@@ -30,6 +30,7 @@ sudo apt-get install docker-compose docker-ce docker-ce-cli containerd.io -y
 	* `docker-compose up`
 * run and attach shell
 	* `docker-compose run web bash`
+	* `psql -U rd postgres`
 
 ## USEFUL LINKS:
 * [docker-compose postgres](https://docs.docker.com/compose/django/)

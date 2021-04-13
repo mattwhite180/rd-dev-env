@@ -20,8 +20,19 @@ apt-get update -y \
         liblzma-dev \
         python-openssl \
         git \
-	openssl libxmlsec1 pkg-config freetds-dev postgresql \
-    apt-utils unixodbc-dev libgssapi-krb5-2 postgresql postgresql-contrib libpq-dev \
+        npm \ 
+        apt-utils \
+        openssl \
+        libxmlsec1 \
+        pkg-config \
+        freetds-dev \
+        postgresql \ 
+        apt-utils \
+        unixodbc-dev \
+        libgssapi-krb5-2 \
+        postgresql \
+        postgresql-contrib \
+        libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
 echo 'PATH="$/pyenv/bin:$PATH"' >> ~/.bashrc
