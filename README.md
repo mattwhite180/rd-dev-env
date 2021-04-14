@@ -13,15 +13,9 @@
 
 ## Installing Docker on Ubuntu 20.04
 ```
-sudo apt-get remove docker docker-engine docker.io containerd runc -y
-sudo apt update; sudo apt upgrade -y
-sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo apt-key fingerprint 0EBFCD88
-echo 'should match: 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88'
-sudo apt update
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-sudo apt-get install docker-compose docker-ce docker-ce-cli containerd.io -y
+sudo apt install docker docker-compose docker-doc docker.io -y
+sudo usermod -aG docker $USER
+sudo systemctl enable docker
 # reboot your computer
 ```
 
@@ -30,7 +24,7 @@ sudo apt-get install docker-compose docker-ce docker-ce-cli containerd.io -y
 	* `docker-compose up`
 * run and attach shell
 	* `docker-compose run web bash`
-	* `psql -U rd postgres`
+	* `psql -h 172.21.0.2 -U rd postgres`
 
 ## USEFUL LINKS:
 * [docker-compose postgres](https://docs.docker.com/compose/django/)
