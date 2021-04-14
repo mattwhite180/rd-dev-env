@@ -27,8 +27,6 @@ pip3 install virtualenv
 mkdir ~/code
 mkdir ~/env
 
-#RUN git clone git@github.com:RentDynamics/rd-api.git ~/code
-
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
 curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
@@ -39,11 +37,11 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 
 source ~/.bashrc
 
-#RUN    /etc/init.d/postgresql start &&\
-#    psql --command "CREATE USER rd WITH PASSWORD 'test1234';" &&\
-#    psql --command "CREATE DATABASE rentdynamics WITH OWNER rd;" &&\
-#    psql --command "CREATE DATABASE rentplus WITH OWNER rd;" &&\
-#    psql --command "ALTER USER rd WITH SUPERUSER;"
+ #PGPASSWORD=test1234 psql -h 172.20.0.2 -U rd postgres --command "CREATE USER rd WITH PASSWORD 'test1234';" &&\
+ #PGPASSWORD=test1234 psql -h 172.20.0.2 -U rd postgres --command "CREATE DATABASE rentdynamics WITH OWNER rd;" &&\
+ #PGPASSWORD=test1234 psql -h 172.20.0.2 -U rd postgres --command "CREATE DATABASE rentplus WITH OWNER rd;" &&\
+ #PGPASSWORD=test1234 psql -h 172.20.0.2 -U rd postgres --command "ALTER USER rd WITH SUPERUSER;"
 
+npm install -g npm
 
 python tests.py
