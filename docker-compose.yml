@@ -17,7 +17,7 @@ services:
     #command: echo "im in db"
       #command: /bin/bash -c "sleep infinity"
   web:
-    build: deb/
+    build: web/
     #command: /bin/bash -c "python tests.py"
     command: /bin/bash -c "sleep infinity"
     volumes:
