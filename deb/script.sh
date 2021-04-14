@@ -1,39 +1,7 @@
 #!/bin/bash
 
-apt-get update -y \
-    && apt-get install -y \
-        make \
-        build-essential \
-        libssl-dev \
-        zlib1g-dev \
-        libbz2-dev \
-        libreadline-dev \
-        libsqlite3-dev \
-        wget \
-        curl \
-        llvm \
-        libncurses5-dev \
-        libncursesw5-dev \
-        xz-utils \
-        tk-dev \
-        libffi-dev \
-        liblzma-dev \
-        python-openssl \
-        git \
-        npm \ 
-        apt-utils \
-        openssl \
-        libxmlsec1 \
-        pkg-config \
-        freetds-dev \
-        postgresql \ 
-        apt-utils \
-        unixodbc-dev \
-        libgssapi-krb5-2 \
-        postgresql \
-        postgresql-contrib \
-        libpq-dev \
-    && rm -rf /var/lib/apt/lists/*
+apt-get update -y
+apt-get install -y apt-utils make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev  python-openssl git npm  apt-utils openssl libxmlsec1 pkg-config freetds-dev postgresql apt-utils unixodbc-dev libgssapi-krb5-2 postgresql postgresql-contrib libpq-dev
 
 echo 'PATH="$/pyenv/bin:$PATH"' >> ~/.bashrc
 echo 'PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
