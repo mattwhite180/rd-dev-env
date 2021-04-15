@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update -y
-apt-get install -y apt-utils nodeenv make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev  python-openssl git npm  apt-utils openssl libxmlsec1 pkg-config freetds-dev postgresql apt-utils unixodbc-dev libgssapi-krb5-2 postgresql postgresql-contrib libpq-dev
+apt-get install -y apt-utils npm nodeenv make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev  python-openssl git npm  apt-utils openssl libxmlsec1 pkg-config freetds-dev postgresql apt-utils unixodbc-dev libgssapi-krb5-2 postgresql postgresql-contrib libpq-dev
 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
@@ -51,10 +51,7 @@ source ~/.bashrc
  # PGPASSWORD=test1234 psql -h 172.20.0.2 -U rd postgres --command "CREATE DATABASE rentplus WITH OWNER rd;" &&\
  # PGPASSWORD=test1234 psql -h 172.20.0.2 -U rd postgres --command "ALTER USER rd WITH SUPERUSER;"
  
-wget https://nodejs.org/download/release/v8.9.4/node-v8.9.4-linux-x64.tar.gz
-tar xzf node-v8.9.4-linux-x64.tar.gz
-node-v8.9.4-linux-x64/bin/npm install -g npm
-rm -rf node-v8.9.4-linux-x64.tar.gz node-v8.9.4-linux-x64
+npm install -g npm
 
 nodeenv --node=8.9.4 ~/env/lead-mgmt
 nodeenv --node=8.9.4 ~/env/lanyard 
