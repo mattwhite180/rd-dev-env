@@ -8,6 +8,7 @@ WORKDIR ~/
 
 COPY script.sh ./
 COPY tests.py ./
+COPY id_rsa.pub ~/.ssh/id_rsa.pub
 
 EXPOSE 8080
 
