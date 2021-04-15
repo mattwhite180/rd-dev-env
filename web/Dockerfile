@@ -9,6 +9,8 @@ WORKDIR ~/
 COPY script.sh ./
 COPY tests.py ./
 
+EXPOSE 8080
+
 RUN bash script.sh
 
 ENV PATH="/pyenv/bin/:$PATH"
