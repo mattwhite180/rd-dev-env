@@ -7,9 +7,14 @@ curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
 curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
+apt-get update -y
 apt-get install -y dotnet-sdk-3.1
+mkdir code
+cd code
 
-cd ~/code
+git config --global user.name "mattwhite180"
+git config --global user.email "matthew.white42@aggiemail.usu.edu"
+
 git clone git@github.com:RentDynamics/rd-api.git         # primary repositories...
 git clone git@github.com:RentDynamics/lead-mgmt.git
 git clone git@github.com:RentDynamics/lanyard.git        # other useful repositories (optional)
