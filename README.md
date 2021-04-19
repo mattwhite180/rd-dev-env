@@ -29,4 +29,4 @@ sudo systemctl enable docker
 	* example: `PGPASSWORD=test1234  psql -h 172.21.0.2 -U rd postgres`
 ## USEFUL LINKS:
 * [docker-compose postgres](https://docs.docker.com/compose/django/)
-
+* [setting up postgres in ubuntu](https://launchschool.com/blog/how-to-install-postgres-for-linux)
