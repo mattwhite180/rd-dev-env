@@ -19,5 +19,5 @@ ENV PATH="/root/.pyenv/versions/3.6.5/bin:$PATH"
 
 #RUN source ~/.bashrc
 
-CMD python tests.py
-#CMD echo 'hello world'
+#CMD python tests.py
+CMD echo 'hello world'

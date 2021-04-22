@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker-compose run web python tests.py
+      run: echo ${{ secrets.MY_SECRET }} > web/id_rsa.pub && docker-compose run web python tests.py

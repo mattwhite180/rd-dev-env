@@ -22,7 +22,14 @@ services:
     command: /bin/bash -c "sleep infinity"
     volumes:
       - .:/python
+    expose:
+      - "8000"
     ports:
       - "8000:8000"
     depends_on:
       - db
+    environment:
+      - PGHOST=db
+      - PGDATABASE=postgres
+      - PGUSER=rd
+      - PGPASSWORD=test1234
