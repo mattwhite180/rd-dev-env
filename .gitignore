@@ -1,6 +1,6 @@
 # git creds
 id_rsa.pub
-
+id_rsa
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
