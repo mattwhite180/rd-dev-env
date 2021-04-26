@@ -4,12 +4,14 @@ services:
   db:
     image: postgres
     restart: always
-    volumes:
-      - ./data/db:/var/lib/postgresql/data
+    networks:
+      - testing_net
     expose:
       - "5432"
     ports:
       - "5432:5432"
+    volumes:
+      - .postgres_data:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB='postgres'
       - POSTGRES_USER='rd'
@@ -26,10 +28,21 @@ services:
       - "8000"
     ports:
       - "8000:8000"
+    networks:
+      - testing_net
+    links:
+      - db:db
     depends_on:
       - db
     environment:
       - PGHOST=db
-      - PGDATABASE=postgres
-      - PGUSER=rd
-      - PGPASSWORD=test1234
+      - PGDATABASE='postgres'
+      - PGUSER='rd'
+      - PGPASSWORD='test1234'
+
+volumes:
+  postgres_data:
+
+networks:
+  testing_net:
+    driver: "bridge"
