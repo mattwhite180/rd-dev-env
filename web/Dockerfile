@@ -4,19 +4,23 @@ FROM debian:buster
 
 SHELL ["/bin/bash", "-c"]
 
-WORKDIR ~/
+
+WORKDIR /root/
 
 COPY script.sh ./
 COPY tests.py ./
+RUN mkdir /root/code
+COPY rd-api /root/code
 
 EXPOSE 8080
+EXPOSE 1433
 
 RUN bash script.sh
 
 ENV PATH="/pyenv/bin/:$PATH"
 ENV PATH="/root/.pyenv/versions/3.6.5/bin:$PATH"
 
-#RUN source ~/.bashrc
+#RUN source /root/.bashrc
 
-CMD python tests.py
-#CMD echo 'hello world'
+#CMD python tests.py
+CMD echo 'hello world'

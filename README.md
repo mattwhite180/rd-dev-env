@@ -22,11 +22,6 @@ sudo systemctl enable docker
 ## Execute Program
 * run `docker-compose build`
 * run `docker-compose run web bash`
-* get local ip of container `hostname -I | awk '{print $1}'`
-* to access the postgres database, run `PGPASSWORD=test1234 psql -h <local-ip> -U rd postgres`
-	* for `<local-ip>`, use the ip from `hostname -I | awk '{print $1}'` but change the last number to one less than itself
-	* for example if `hostname -I | awk '{print $1}'` returns `172.21.0.3`, you will use `172.21.0.2` for `<local-ip>`
-	* example: `PGPASSWORD=test1234  psql -h 172.21.0.2 -U rd postgres`
 ## USEFUL LINKS:
 * [docker-compose postgres](https://docs.docker.com/compose/django/)
-
+* [setting up postgres in ubuntu](https://launchschool.com/blog/how-to-install-postgres-for-linux)
