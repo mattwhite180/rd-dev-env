@@ -1,0 +1,10 @@
+export LDFLAGS="-L /usr/local/opt/openssl/lib"
+export CPPFLAGS="-I /usr/local/opt/openssl/include"
+export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
+export PYCURL_SSL_LIBRARY=openssl
+
+alias rdapi='source \root/env/rd-api/bin/activate; cd /root/code/rd-api'
+alias textmsgitpy='source /root/env/textmsgit-py/bin/activate; cd /root/code/textmsgit-py'
+alias email='source /root/env/email/bin/activate; cd /root/code/email'
+alias pipr='pip install -r requirements.txt'  # installs pip package dependencies. run after you've activated your virtual environment
+alias refresh_rd_db='psql postgres -c "DROP DATABASE rentdynamics;"; psql postgres -c "CREATE DATABASE rentdynamics with owner rd;"; psql postgres -c "DROP DATABASE rdrentplus;"; psql postgres -c "CREATE DATABASE rdrentplus with owner rd;"'  # this will drop and recreate your local postgres databases. You will need to migrate them afterwards
