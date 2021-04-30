@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update -y
-apt-get install -y apt-utils npm nodeenv unixodbc tdsodbc python3-pymssql freetds-bin make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev  python-openssl git npm  apt-utils openssl libxmlsec1 pkg-config freetds-dev postgresql apt-utils unixodbc-dev libgssapi-krb5-2 postgresql postgresql-contrib libpq-dev
+apt-get install -y apt-utils libxmlsec1-dev xmlsec1 libxmlsec1-openssl npm nodeenv unixodbc tdsodbc python3-pymssql freetds-bin make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev  python-openssl git npm  apt-utils openssl libxmlsec1 pkg-config freetds-dev postgresql apt-utils unixodbc-dev libgssapi-krb5-2 postgresql postgresql-contrib libpq-dev
 apt-get install git -y
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 

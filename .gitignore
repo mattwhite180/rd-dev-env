@@ -3,7 +3,7 @@ rd-api/
 __pycache__/
 *.py[cod]
 *$py.class
-
+bashrc
 # C extensions
 *.so
 
