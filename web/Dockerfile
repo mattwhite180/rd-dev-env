@@ -9,6 +9,7 @@ WORKDIR /root/
 
 COPY script.sh ./
 COPY tests.py ./
+COPY bashrc /root/.bashrc
 RUN mkdir /root/code
 COPY rd-api /root/code
 
