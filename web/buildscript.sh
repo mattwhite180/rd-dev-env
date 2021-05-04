@@ -47,10 +47,6 @@ source /root/.bashrc
 
 #service postgresql start
 
-# psql --command "CREATE USER rd WITH PASSWORD 'test1234';"
-# psql --command "CREATE DATABASE rentdynamics WITH OWNER rd;"
-# psql --command "CREATE DATABASE rentplus WITH OWNER rd;"
-# psql --command "ALTER USER rd WITH SUPERUSER;"
 # npm install -g npm
 
 # nodeenv --node=8.9.4 /root/env/lead-mgmt
@@ -88,21 +84,18 @@ source /root/.bashrc
 # echo alias pipr='pip3 install -r requirements.txt'  # installs pip package dependencies. run after you've activated your virtual environment >> /root/.bashrc
 # echo alias refresh_rd_db='psql postgres -c "DROP DATABASE rentdynamics;"; psql postgres -c "CREATE DATABASE rentdynamics with owner rd;"; psql postgres -c "DROP DATABASE rdrentplus;"; psql postgres -c "CREATE DATABASE rdrentplus with owner rd;"' >> /root/.bashrc  # this will drop and recreate your local postgres databases. You will need to migrate them afterwards
 
-# mkdir -p /private/etc/
-# echo "127.0.0.1  localhost.rentdynamics.com" > /private/etc/hosts
+mkdir -p /private/etc/
+echo "127.0.0.1  localhost.rentdynamics.com" > /private/etc/hosts
 
 # source /root/.bashrc
 
 # source /root/env/rd-api/bin/activate
 
-# cd /root/code/rd-api
+cd /root/code/
 
-# pip3 install -r requirements.txt
+pip install --no-cache-dir -r requirements.tx
 
 # python tests.py
 
-# python manage.py makemigrations
-# python manage.py migrate
-# python manage.py test
 # python manage.py makemigrations
 # python manage.py runserver

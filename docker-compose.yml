@@ -20,8 +20,8 @@ services:
       #command: /bin/bash -c "sleep infinity"
   web:
     build: web/
-    #command: /bin/bash -c "python tests.py"
     command: /bin/bash -c "sleep infinity"
+    #command: /bin/bash runscript.sh
     volumes:
       - .:/python
     expose:
