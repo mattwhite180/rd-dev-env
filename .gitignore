@@ -1,9 +1,10 @@
 rd-api/
+lead-mgnt
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
+bashrc
 # C extensions
 *.so
 
