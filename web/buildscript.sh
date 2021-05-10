@@ -93,7 +93,7 @@ echo "127.0.0.1  localhost.rentdynamics.com" > /private/etc/hosts
 
 cd /root/code/
 
-pip install --no-cache-dir -r requirements.tx
+pip install --no-cache-dir -r requirements.txt
 
 # python tests.py
 
