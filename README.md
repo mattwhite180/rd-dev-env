@@ -20,7 +20,7 @@ sudo systemctl enable docker
 ```
 ## Setup
 * clone the `rd-api` repo in the `web` directory
-* create a `bashrc` (no . at beginning) in the `web` directory with the following environment variables filled out:
+* create a `bashrc` (no `.` at beginning) in the `web` directory with the following environment variables filled out:
 ```
 # rd-api ENV variables
 export DB_USERNAME=
@@ -60,8 +60,4 @@ export ZENDESK_API_TOKEN=
 ```
 
 ## Execute Program
-* run `docker-compose build`
-* run `docker-compose run web bash`
-## USEFUL LINKS:
-* [docker-compose postgres](https://docs.docker.com/compose/django/)
-* [setting up postgres in ubuntu](https://launchschool.com/blog/how-to-install-postgres-for-linux)
+* run `docker-compose up`
