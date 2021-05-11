@@ -21,7 +21,7 @@ services:
   web:
     build: web/
     #command: python tests.py
-    command: /bin/bash -c "sleep infinity"
+    command: /bin/bash -c "sleep 10 && bash runscript.sh"
     #command: bash /root/runscript.sh
     volumes:
       - .:/python
