@@ -61,3 +61,6 @@ export ZENDESK_API_TOKEN=
 
 ## Execute Program
 * run `docker-compose up`
+* when you see `watching for file changes with stateReloader`, go to `http://localhost.rentdynamics.com:4200/`
+
+![see rd-screenshot.png](rd-screenshot.png)
