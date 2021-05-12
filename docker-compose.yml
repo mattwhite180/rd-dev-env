@@ -36,6 +36,19 @@ services:
       - PGDATABASE='postgres'
       - PGUSER='rd'
       - PGPASSWORD='test1234'
+  lead:
+    build: lead/
+    command: npm run localserve
+    networks:
+      - testing_net
+    expose:
+      - "1433"
+      - "4200"
+    ports:
+      - "1433:1433"
+      - "4200:4200"
+    depends_on:
+      - web
 
 volumes:
   postgres_data:
