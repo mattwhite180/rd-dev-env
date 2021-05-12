@@ -16,13 +16,9 @@ services:
       - POSTGRES_DB='postgres'
       - POSTGRES_USER='rd'
       - POSTGRES_PASSWORD='test1234'
-    #command: echo "im in db"
-      #command: /bin/bash -c "sleep infinity"
   web:
     build: web/
-    command: python tests.py
-    #command: /bin/bash -c "sleep infinity"
-    #command: bash /root/runscript.sh
+    command: /bin/bash -c "sleep 10 && bash runscript.sh"
     volumes:
       - .:/python
     expose:
