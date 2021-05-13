@@ -91,9 +91,6 @@ echo "127.0.0.1  localhost.rentdynamics.com" > /private/etc/hosts
 
 # source /root/env/rd-api/bin/activate
 
-cd /root/code/
-
-pip install --no-cache-dir -r requirements.txt
 
 # python tests.py
 
