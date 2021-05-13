@@ -38,7 +38,7 @@ services:
       - PGPASSWORD='test1234'
   lead:
     build: lead/
-    command: npm run localserve
+    command: /bin/bash -c "hostname -I && npm run localserve"
     networks:
       - testing_net
     expose:
