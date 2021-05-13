@@ -1,4 +1,4 @@
-version: "3.3"
+version: "3.4"
 
 services:
   db:
@@ -38,7 +38,8 @@ services:
       - PGPASSWORD='test1234'
   lead:
     build: lead/
-    command: /bin/bash -c "hostname -I && npm run localserve"
+    #command: /bin/bash -c "sleep infinity"
+    command: /bin/bash -c "sleep 10 && hostname -I && npm run localserve"
     networks:
       - testing_net
     expose:
@@ -47,8 +48,12 @@ services:
     ports:
       - "1433:1433"
       - "4200:4200"
+    extra_hosts:
+      - "localhost.rentdynamics.com:127.0.0.1"
     depends_on:
       - web
+    environment:
+            VIRTUAL_HOST : localhost.rentdynamics.com
 
 volumes:
   postgres_data:

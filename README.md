@@ -20,6 +20,7 @@ sudo systemctl enable docker
 ```
 ## Setup
 * clone the `rd-api` repo in the `web` directory
+* clone the `lead-mgmt` repo in the `lead` directory
 * create a `bashrc` (no `.` at beginning) in the `web` directory with the following environment variables filled out:
 ```
 # rd-api ENV variables
@@ -61,7 +62,10 @@ export ZENDESK_API_TOKEN=
 
 ## Execute Program
 * run `docker-compose up`
-* setup lead-mgmg
-* when you see `watching for file changes with stateReloader`, go to `http://localhost.rentdynamics.com:4200/`
+* when you see
+	* `watching for file changes with stateReloader` for `web` and
+	* `ℹ ｢wdm｣: Compiled successfully.` for lead,
+* go to `http://localhost.rentdynamics.com:4200/`
 
+![see lead-screenshot.png](lead-screenshot.png)
 ![see rd-screenshot.png](rd-screenshot.png)
