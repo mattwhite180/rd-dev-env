@@ -14,13 +14,12 @@ COPY bashrc /root/.bashrc
 RUN mkdir /root/code
 COPY requirements.txt ./
 RUN bash buildscript.sh
-RUN pip install --no-cache-dir requirements.txt
+ENV PATH="/pyenv/bin/:$PATH"
+ENV PATH="/root/.pyenv/versions/3.6.5/bin:$PATH"
 EXPOSE 8080
 EXPOSE 1433
 
 
-ENV PATH="/pyenv/bin/:$PATH"
-ENV PATH="/root/.pyenv/versions/3.6.5/bin:$PATH"
 
 COPY rd-api /root/code
 

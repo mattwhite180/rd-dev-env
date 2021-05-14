@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update -y
-apt-get install -y apt-utils libxmlsec1-dev xmlsec1 libxmlsec1-openssl npm nodeenv unixodbc tdsodbc python3-pymssql freetds-bin make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev  python-openssl git npm  apt-utils openssl libxmlsec1 pkg-config freetds-dev postgresql apt-utils unixodbc-dev libgssapi-krb5-2 postgresql postgresql-contrib libpq-dev
+apt-get install -y apt-utils libxmlsec1-dev xmlsec1 libxmlsec1-openssl unixodbc tdsodbc python3-pymssql freetds-bin make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev  python-openssl git apt-utils openssl libxmlsec1 pkg-config freetds-dev postgresql apt-utils unixodbc-dev libgssapi-krb5-2 postgresql postgresql-contrib libpq-dev
 apt-get install git -y
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
@@ -28,11 +28,14 @@ echo 'export CPPFLAGS="-I/usr/local/opt/openssl/include"' >> /root/.bashrc
 echo 'export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"' >> /root/.bashrc
 echo 'export PYCURL_SSL_LIBRARY=openssl' >> /root/.bashrc
 
+
 pip3 install virtualenv
 
 mkdir /root/code
 mkdir /root/env
-mv /home/rd-api /root/code
+source /root/.bashrc
+
+pip3 install --no-cache-dir -r requirements.txt
 
 apt update
 ACCEPT_EULA=Y apt-get install -y msodbcsql17 mssql-tools
