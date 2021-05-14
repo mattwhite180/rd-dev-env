@@ -18,7 +18,7 @@ services:
       - POSTGRES_PASSWORD='test1234'
   web:
     build: web/
-    command: /bin/bash -c "sleep 10 && bash runscript.sh"
+    command: /bin/bash -c "sleep 5 && bash runscript.sh"
     volumes:
       - .:/python
     expose:

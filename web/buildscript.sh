@@ -28,11 +28,14 @@ echo 'export CPPFLAGS="-I/usr/local/opt/openssl/include"' >> /root/.bashrc
 echo 'export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"' >> /root/.bashrc
 echo 'export PYCURL_SSL_LIBRARY=openssl' >> /root/.bashrc
 
+
 pip3 install virtualenv
 
 mkdir /root/code
 mkdir /root/env
-mv /home/rd-api /root/code
+source /root/.bashrc
+
+pip3 install --no-cache-dir -r requirements.txt
 
 apt update
 ACCEPT_EULA=Y apt-get install -y msodbcsql17 mssql-tools
@@ -91,9 +94,6 @@ echo "127.0.0.1  localhost.rentdynamics.com" > /private/etc/hosts
 
 # source /root/env/rd-api/bin/activate
 
-cd /root/code/
-
-pip install --no-cache-dir -r requirements.txt
 
 # python tests.py
 
