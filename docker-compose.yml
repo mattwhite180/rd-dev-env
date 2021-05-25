@@ -38,14 +38,16 @@ services:
       - PGPASSWORD='test1234'
   lead:
     build: lead/
-    #command: /bin/bash -c "sleep infinity"
-    command: /bin/bash -c "sleep 10 && hostname -I && npm run localserve"
+    command: /bin/bash -c "sleep infinity"
+    #command: /bin/bash -c "sleep 10 && hostname -I && npm run localserve"
     networks:
       - testing_net
     expose:
       - "1433"
       - "4200"
+      - "80"
     ports:
+      - "80:80"
       - "1433:1433"
       - "4200:4200"
     extra_hosts:
@@ -60,4 +62,4 @@ volumes:
 
 networks:
   testing_net:
-    driver: "bridge"
+          driver: "bridge"
