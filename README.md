@@ -7,6 +7,8 @@
 |------|-----|
 | [![UnitTests](https://github.com/mattwhite180/rd-dev-env/actions/workflows/docker.yml/badge.svg?branch=master)](https://github.com/mattwhite180/rd-dev-env/actions/workflows/docker.yml) | [![Docker Image CI](https://github.com/mattwhite180/rd-dev-env/actions/workflows/docker.yml/badge.svg?branch=dev)](https://github.com/mattwhite180/rd-dev-env/actions/workflows/docker.yml) |
 
+## Dependencies
+* works on docker-compose `1.25`
 
 ## About
 * uses the [Debian](https://hub.docker.com/_/debian) docker image
