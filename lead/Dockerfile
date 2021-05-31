@@ -24,8 +24,6 @@ RUN npm config set registry http://registry.npmjs.org/
 RUN npm install -g npm@5.6.0
 RUN npm set progress=false
 
-RUN echo '127.0.0.1 localhost.rentdynamics.com' > /etc/hosts
-
 RUN apt update && apt install vim -y
 
 USER leaduser
