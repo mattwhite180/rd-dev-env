@@ -1,12 +1,10 @@
 # rd-dev-env
 ![Python Badge](https://img.shields.io/badge/Python-3.6.5-informational?style=plastic&logo=python&logoColor=green&color=green)
 ![Docker Badge](https://img.shields.io/badge/Docker-Debian-informational?style=plastic&logo=docker&logoColor=blue&color=blue)
-![Docker Badge](https://img.shields.io/badge/DockerCompose-3.3-informational?style=plastic&logo=docker&logoColor=blue&color=blue)
+![Docker Badge](https://img.shields.io/badge/DockerCompose-1.25-informational?style=plastic&logo=docker&logoColor=blue&color=blue)
 
-| main | dev |
-|------|-----|
-| [![UnitTests](https://github.com/mattwhite180/rd-dev-env/actions/workflows/docker.yml/badge.svg?branch=master)](https://github.com/mattwhite180/rd-dev-env/actions/workflows/docker.yml) | [![Docker Image CI](https://github.com/mattwhite180/rd-dev-env/actions/workflows/docker.yml/badge.svg?branch=dev)](https://github.com/mattwhite180/rd-dev-env/actions/workflows/docker.yml) |
-
+## Dependencies
+* works on docker-compose `1.25`
 
 ## About
 * uses the [Debian](https://hub.docker.com/_/debian) docker image
@@ -20,6 +18,7 @@ sudo systemctl enable docker
 ```
 ## Setup
 * clone the `rd-api` repo in the `web` directory
+* clone the `lead-mgmt` repo in the `lead` directory
 * create a `bashrc` (no `.` at beginning) in the `web` directory with the following environment variables filled out:
 ```
 # rd-api ENV variables
@@ -61,7 +60,11 @@ export ZENDESK_API_TOKEN=
 
 ## Execute Program
 * run `docker-compose up`
-* setup lead-mgmt
-* when you see `watching for file changes with stateReloader`, go to `http://localhost.rentdynamics.com:4200/`
+* when you see
+	* `watching for file changes with stateReloader` for `web` and
+	* `ℹ ｢wdm｣: Compiled successfully.` for lead,
+* go to `http://localhost.rentdynamics.com:4200/`
+
+![see lead-screenshot.png](lead-screenshot.png)
 
 ![see rd-screenshot.png](rd-screenshot.png)

@@ -1,11 +1,10 @@
-version: "3.3"
+version: "3.4"
 
 services:
   db:
     image: postgres
     restart: always
-    networks:
-      - testing_net
+    network_mode: "host"
     expose:
       - "5432"
     ports:
@@ -18,17 +17,14 @@ services:
       - POSTGRES_PASSWORD='test1234'
   web:
     build: web/
-    command: /bin/bash -c "sleep 5 && bash runscript.sh"
+    command: /bin/bash -c "bash runscript.sh"
     volumes:
       - .:/python
     expose:
       - "8000"
     ports:
       - "8000:8000"
-    networks:
-      - testing_net
-    links:
-      - db:db
+    network_mode: "host"
     depends_on:
       - db
     environment:
@@ -36,10 +32,22 @@ services:
       - PGDATABASE='postgres'
       - PGUSER='rd'
       - PGPASSWORD='test1234'
+  lead:
+    build: lead/
+    #command: /bin/bash -c "sleep infinity"
+    command: /bin/bash -c "sleep 10 && hostname -I && npm run localserve"
+    network_mode: "host"
+    expose:
+      - "1433"
+      - "4200"
+      - "80"
+    ports:
+      - "80:80"
+      - "1433:1433"
+      - "4200:4200"
+    depends_on:
+      - web
 
 volumes:
   postgres_data:
 
-networks:
-  testing_net:
-    driver: "bridge"

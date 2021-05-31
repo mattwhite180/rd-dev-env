@@ -4,6 +4,8 @@ FROM debian:buster
 
 SHELL ["/bin/bash", "-c"]
 
+EXPOSE 8080
+EXPOSE 1433
 
 WORKDIR /root/
 
@@ -16,8 +18,6 @@ COPY requirements.txt ./
 RUN bash buildscript.sh
 ENV PATH="/pyenv/bin/:$PATH"
 ENV PATH="/root/.pyenv/versions/3.6.5/bin:$PATH"
-EXPOSE 8080
-EXPOSE 1433
 
 
 
