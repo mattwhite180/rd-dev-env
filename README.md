@@ -70,4 +70,5 @@ export ZENDESK_API_TOKEN=
 * go to `http://localhost.rentdynamics.com:4200/`
 
 ![see lead-screenshot.png](lead-screenshot.png)
+
 ![see rd-screenshot.png](rd-screenshot.png)
