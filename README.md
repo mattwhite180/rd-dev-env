@@ -1,4 +1,5 @@
 # rd-dev-env
+[![Docker Test](https://github.com/mattwhite180/rd-dev-env/actions/workflows/dockertest.yml/badge.svg)](https://github.com/mattwhite180/rd-dev-env/actions/workflows/dockertest.yml)
 ![Python Badge](https://img.shields.io/badge/Python-3.6.5-informational?style=plastic&logo=python&logoColor=green&color=green)
 ![Docker Badge](https://img.shields.io/badge/Docker-Debian-informational?style=plastic&logo=docker&logoColor=blue&color=blue)
 ![Docker Badge](https://img.shields.io/badge/DockerCompose-1.25-informational?style=plastic&logo=docker&logoColor=blue&color=blue)
