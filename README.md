@@ -19,6 +19,7 @@ sudo systemctl enable docker
 ```
 ## Setup
 * clone the `rd-api` repo in the `web` directory
+	* add both `"HOST": "db"` and `"PORT": "5432" to the DATABSE dictionaries in` settings.py`
 * clone the `lead-mgmt` repo in the `lead` directory
 * create a `bashrc` (no `.` at beginning) in the `web` directory with the following environment variables filled out:
 ```
@@ -58,8 +59,6 @@ export TWILIO_MASTER_ACCOUNT_SID=
 export TWILIO_MASTER_AUTH_TOKEN=
 export ZENDESK_API_TOKEN=
 ```
-
-add both `"HOST": "db"` and `"PORT": "5432" to the DATABSE dictionaries in `settings.py`
 
 ## Execute Program
 * run `docker-compose up`
