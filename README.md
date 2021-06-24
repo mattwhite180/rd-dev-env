@@ -59,6 +59,8 @@ export TWILIO_MASTER_AUTH_TOKEN=
 export ZENDESK_API_TOKEN=
 ```
 
+add both `"HOST": "db"` and `"PORT": "5432" to the DATABSE dictionaries in `settings.py`
+
 ## Execute Program
 * run `docker-compose up`
 * when you see
